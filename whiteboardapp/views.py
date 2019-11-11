@@ -1,3 +1,4 @@
+# test 2 - modified
 # test- Installing git
 #view only has to be concerned with making the necessary database queries and passing that data into a template 
 
