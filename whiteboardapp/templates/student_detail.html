@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+    <h3>{{student.student_name | capfirst}}</h3>
+    <p>Student ID: {{student.id}}</p>
+    {% if student.student_sex%}
+        <p>Sex: {{student.student_sex}}</p>
+    {% endif %}
+    
+    {% if student.courses.all %}
+        <p>Enrolled in the following courses for the Fall 2019:</p>
+        <ul>
+            {% for course in student.courses.all %}
+                <li>{{course.course_title}}</li>
+            <!-- <p>Enrolled on: {{courses.created | date:"M d Y"}}</p> -->
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+{% endblock %}

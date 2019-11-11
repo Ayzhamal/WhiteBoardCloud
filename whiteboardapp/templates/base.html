@@ -1,0 +1,60 @@
+{% load static %}
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home - UHD Students' WhiteBoard </title>
+        <link rel="stylesheet" id="ample-style-css" href="{% static 'style.css' %}" type="text/css" media="all">
+    </head>
+    <body class="wide">
+        <div id="page" class="hfeed site">
+            <header>
+                <div class="header">
+                    <div class="main-head-wrap inner-wrap clearfix">
+                        <div id="header-logo-image">
+                            <a href="/" title="UHD Students' WhiteBoard" rel="home">
+                                <img src="{% static 'images/logo.png' %}" alt="UHD logo">
+                            </a>
+                        </div>
+                        <div id="header-text" class="">
+                            <h1 id="site-title">
+                                <a href="/" title="UHD Student' WhiteBoard" rel="home">UHD Students' Whiteboard </a>
+                            </h1>
+                        </div>
+                    </div>
+                    <!-- <img src="{% static 'images/logo.png' %}" alt="UHD logo"> -->
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="single-page clearfix">
+                    <div class="inner-wrap">
+                        <p>The University of Houston-Downtown is a comprehensive four-year university offering bachelor's and master's degree programs aimed at career preparation.</p>
+                        <hr>
+                        <div>
+                        {% block content %}
+                        {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <footer id="colophon">
+                <div class="inner-wrap">
+                    <p>
+                        <!-- <pre> to keep formatting-->
+                        UHD Finish Strong
+                        University of Houston-Downtown
+                        One Main Street
+                        Houston, TX 77002
+                        713-221-8000
+
+                        Visitor Parking and Uber/Lyft Stop
+                        201 Girard Street
+                        Houston, TX 77002
+                        <!-- </pre> -->
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script src="{% static 'main.js' %}"></script>
+    </body>
+</html>

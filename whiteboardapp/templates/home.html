@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+    {% for student in students %}
+    <div class="studentname"> 
+        <a href="{% url 'student_detail' student.id %}">
+            <h3>{{student.student_name|capfirst}}</h3>
+        </a>
+        {% if student.student_sex %}
+            <p>Student sex: {{student.student_sex}}</p>
+        {% endif %}
+        <p>GPA:</p>
+        
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
