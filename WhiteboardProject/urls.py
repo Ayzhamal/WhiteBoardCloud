@@ -20,6 +20,9 @@ from django.conf.urls import url
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
-    re_path(r'^$', views.home, name="home"),
+    re_path(r'^$', views.index, name="index"),
     re_path(r'^student/(\d+)', views.student_detail, name="student_detail"),
+    re_path(r'accounts/login/', views.login_view), 
+    re_path(r'accounts/register/', views.register_view),
+    re_path('accounts/logout/', views.logout_view)
 ]
